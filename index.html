@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Addition Machine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .center-content{
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="center-content">
+            <strong style="font-size: large;">Addition Calculator</strong><br><br>
+            Enter Number a: <input type="number" id="num1"><br>
+            Enter Number b: <input type="number" id="num2"><br><br>
+            <button onclick="add()"><strong> Add a & b </strong></button><br><br>
+            <p id="answer"></p>
+        </div>
+    </section>
+    <script>
+        function add(){
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            var c = a + b;
+            document.getElementById("answer").innerHTML = "a + b = " + c;
+        }
+    </script>
+</body>
+</html>
